@@ -3,11 +3,12 @@ var mime = require('mime');
 var Path = require('path');
 
 module.exports = function (config) {
+    config = config || {};
     return function (req, res, next) {
         var query = req.query;
         var k;
         var combo = '';
-        var path = config.base + req.path;
+        var path = config.base || process.cwd() + req.path;
 
         for (k in query) {
             if (k.charAt(0) === '?') {
