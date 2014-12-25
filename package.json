@@ -1,16 +1,23 @@
 {
   "name": "combo-handler",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "yiminghe <yiminghe@gmail.com>",
   "engines": {
-    "node": "~0.10"
+    "node": ">=0.10"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "http://github.com/yiminghe/combo-handler.git"
   },
+  "scripts": {
+    "start": "node --harmony tests/server"
+  },
   "dependencies": {
     "mime": "^1.2.11"
+  },
+  "devDependencies": {
+    "express": "~4.10.6",
+    "koa": "~0.14.0"
   }
 }

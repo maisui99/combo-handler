@@ -1,13 +1,24 @@
 # combo-handler
 
-a middleware to handle combo url
+a middleware for express and koa to handle combo url
 
 ## example
 
+### express
 ``` javascript
 var app = require('express')();
 var comboHandler = require('comboHandler');
 app.use('/',comboHandler({
+    base: '/assets/'
+}));
+app.listen(80);
+```
+
+### koa
+``` javascript
+var app = require('koa')();
+var comboHandler = require('comboHandler/lib/koa');
+app.use(comboHandler({
     base: '/assets/'
 }));
 app.listen(80);
